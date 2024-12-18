@@ -1,0 +1,876 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name pvba
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import pvba
+public enum Skie {
+  public enum RuntimeKotlin {
+    public enum SkieColdFlowIterator {
+      public typealias __Kotlin = pvba.SkieColdFlowIterator
+    }
+    public enum SkieKotlinFlow {
+      public typealias __Kotlin = pvba.SkieKotlinFlow
+    }
+    public enum SkieKotlinMutableSharedFlow {
+      public typealias __Kotlin = pvba.SkieKotlinMutableSharedFlow
+    }
+    public enum SkieKotlinMutableStateFlow {
+      public typealias __Kotlin = pvba.SkieKotlinMutableStateFlow
+    }
+    public enum SkieKotlinOptionalFlow {
+      public typealias __Kotlin = pvba.SkieKotlinOptionalFlow
+    }
+    public enum SkieKotlinOptionalMutableSharedFlow {
+      public typealias __Kotlin = pvba.SkieKotlinOptionalMutableSharedFlow
+    }
+    public enum SkieKotlinOptionalMutableStateFlow {
+      public typealias __Kotlin = pvba.SkieKotlinOptionalMutableStateFlow
+    }
+    public enum SkieKotlinOptionalSharedFlow {
+      public typealias __Kotlin = pvba.SkieKotlinOptionalSharedFlow
+    }
+    public enum SkieKotlinOptionalStateFlow {
+      public typealias __Kotlin = pvba.SkieKotlinOptionalStateFlow
+    }
+    public enum SkieKotlinSharedFlow {
+      public typealias __Kotlin = pvba.SkieKotlinSharedFlow
+    }
+    public enum SkieKotlinStateFlow {
+      public typealias __Kotlin = pvba.SkieKotlinStateFlow
+    }
+    public enum Skie_CancellationHandler {
+      public typealias __Kotlin = pvba.Skie_CancellationHandler
+    }
+    public enum Skie_DispatcherDelegate {
+      public typealias __Kotlin = pvba.Skie_DispatcherDelegate
+    }
+    public enum Skie_SuspendHandler {
+      public typealias __Kotlin = pvba.Skie_SuspendHandler
+    }
+    public enum Skie_SuspendResult {
+      public typealias __Kotlin = pvba.Skie_SuspendResult
+      public enum Success {
+        public typealias __Kotlin = pvba.Skie_SuspendResult.Success
+      }
+      public enum Error {
+        public typealias __Kotlin = pvba.Skie_SuspendResult.Error
+      }
+      public enum Canceled {
+        public typealias __Kotlin = pvba.Skie_SuspendResult.Canceled
+      }
+    }
+  }
+  public typealias co_touchlab_skie__runtime_kotlin = pvba.Skie.RuntimeKotlin
+  public enum KotlinxCoroutinesCore {
+    public enum Flow {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreFlow
+    }
+    public enum StateFlow {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreStateFlow
+    }
+    public enum SharedFlow {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreSharedFlow
+    }
+    public enum MutableSharedFlow {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreMutableSharedFlow
+    }
+    public enum MutableStateFlow {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreMutableStateFlow
+    }
+    public enum Runnable {
+      public typealias __Kotlin = pvba.Kotlinx_coroutines_coreRunnable
+    }
+  }
+  public typealias org_jetbrains_kotlinx__kotlinx_coroutines_core = pvba.Skie.KotlinxCoroutinesCore
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers public class SkieSwiftFlowIterator<T> : _Concurrency.AsyncIteratorProtocol {
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func next() async -> T?
+  #endif
+  @objc deinit
+  public typealias Element = T
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+#if $PrimaryAssociatedTypes2
+public protocol SkieSwiftFlowProtocol<Element> : _Concurrency.AsyncSequence {
+  associatedtype Element
+  associatedtype Delegate : pvba.Kotlinx_coroutines_coreFlow
+}
+#else
+public protocol SkieSwiftFlowProtocol : _Concurrency.AsyncSequence {
+  associatedtype Element
+  associatedtype Delegate : pvba.Kotlinx_coroutines_coreFlow
+}
+#endif
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = pvba.SkieKotlinFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinOptionalFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = pvba.SkieKotlinOptionalFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftSharedFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var replayCache: [T] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = pvba.SkieKotlinSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreSharedFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalSharedFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var replayCache: [T?] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinOptionalSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = pvba.SkieKotlinOptionalSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreSharedFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftMutableSharedFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var subscriptionCount: pvba.SkieSwiftStateFlow<pvba.KotlinInt> {
+    get
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T) async throws
+  #endif
+  final public func tryEmit(value: T) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftMutableSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftMutableSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinMutableSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = pvba.SkieKotlinMutableSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreMutableSharedFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalMutableSharedFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var subscriptionCount: pvba.SkieSwiftStateFlow<pvba.KotlinInt> {
+    get
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T?) async throws
+  #endif
+  final public func tryEmit(value: T?) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalMutableSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalMutableSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = pvba.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreMutableSharedFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftStateFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T {
+    get
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = pvba.SkieKotlinStateFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreStateFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalStateFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T? {
+    get
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinOptionalStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = pvba.SkieKotlinOptionalStateFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreStateFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftMutableStateFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T {
+    get
+    set(value)
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  final public var subscriptionCount: pvba.SkieSwiftStateFlow<pvba.KotlinInt> {
+    get
+  }
+  final public func compareAndSet(expect: T, update: T) -> Swift.Bool
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T) async throws
+  #endif
+  final public func tryEmit(value: T) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftMutableStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftMutableStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinMutableStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinMutableStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = pvba.SkieKotlinMutableStateFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreMutableStateFlow
+  @objc deinit
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalMutableStateFlow<T> : pvba.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T? {
+    get
+    set(value)
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  final public var subscriptionCount: pvba.SkieSwiftStateFlow<pvba.KotlinInt> {
+    get
+  }
+  final public func compareAndSet(expect: T?, update: T?) -> Swift.Bool
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T?) async throws
+  #endif
+  final public func tryEmit(value: T?) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalMutableStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>, result: inout pvba.SkieSwiftOptionalMutableStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: pvba.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> pvba.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> pvba.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = pvba.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = pvba.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>
+  public typealias Delegate = any pvba.Kotlinx_coroutines_coreMutableStateFlow
+  @objc deinit
+}
+#endif
+extension pvba.Skie.RuntimeKotlin.SkieColdFlowIterator {
+  public struct __Suspend<E> where E : AnyObject {
+    public let __kotlinObject: pvba.SkieColdFlowIterator<E>
+    public init(_ __kotlinObject: pvba.SkieColdFlowIterator<E>)
+  }
+}
+public func skie<E>(_ kotlinObject: pvba.SkieColdFlowIterator<E>) -> pvba.Skie.RuntimeKotlin.SkieColdFlowIterator.__Suspend<E> where E : AnyObject
+extension pvba.Skie.RuntimeKotlin.SkieColdFlowIterator.__Suspend {
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func hasNext() async throws -> pvba.KotlinBoolean
+  #endif
+}
+extension pvba.Kotlinx_coroutines_coreFlow {
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func collect(collector: any pvba.Kotlinx_coroutines_coreFlowCollector) async throws
+  #endif
+}
+extension pvba.Kotlinx_coroutines_coreFlowCollector {
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func emit(value: Any?) async throws
+  #endif
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftFlow<T>) -> pvba.SkieKotlinFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftFlow<T>) -> pvba.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinSharedFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftSharedFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalSharedFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinMutableSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinMutableSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinMutableSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftMutableSharedFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftMutableSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalMutableSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalMutableSharedFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: pvba.SkieSwiftMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>) -> pvba.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalMutableSharedFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalMutableSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableSharedFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinStateFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinStateFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftStateFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftOptionalStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalStateFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalStateFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinMutableStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinMutableStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinMutableStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftMutableStateFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftMutableStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalMutableStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalMutableStateFlow<T> where T : AnyObject
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: pvba.SkieSwiftMutableStateFlow<T>) -> pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>) -> pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalMutableStateFlow where T : AnyObject {
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+#if compiler(>=5.3) && $RethrowsProtocol
+extension pvba.SkieSwiftOptionalMutableStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: pvba.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: pvba.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: pvba.SkieSwiftOptionalMutableStateFlow<T>)
+}
+#endif
+extension pvba.Skie.RuntimeKotlin.Skie_SuspendResult {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case canceled(pvba.Skie_SuspendResult.Canceled)
+    case error(pvba.Skie_SuspendResult.Error)
+    case success(pvba.Skie_SuspendResult.Success)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: pvba.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed, b: pvba.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> pvba.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed where __Sealed : pvba.Skie_SuspendResult
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> pvba.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed? where __Sealed : pvba.Skie_SuspendResult

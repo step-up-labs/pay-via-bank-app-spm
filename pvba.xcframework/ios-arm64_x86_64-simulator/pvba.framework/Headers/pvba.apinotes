@@ -1,0 +1,950 @@
+Name: "pvba"
+Classes:
+- Name: "PvbaBase"
+  SwiftName: "KotlinBase"
+- Name: "PvbaMutableSet"
+  SwiftName: "KotlinMutableSet"
+- Name: "PvbaMutableDictionary"
+  SwiftName: "KotlinMutableDictionary"
+- Name: "PvbaNumber"
+  SwiftName: "KotlinNumber"
+- Name: "PvbaByte"
+  SwiftName: "KotlinByte"
+- Name: "PvbaUByte"
+  SwiftName: "KotlinUByte"
+- Name: "PvbaShort"
+  SwiftName: "KotlinShort"
+- Name: "PvbaUShort"
+  SwiftName: "KotlinUShort"
+- Name: "PvbaInt"
+  SwiftName: "KotlinInt"
+- Name: "PvbaUInt"
+  SwiftName: "KotlinUInt"
+- Name: "PvbaLong"
+  SwiftName: "KotlinLong"
+- Name: "PvbaULong"
+  SwiftName: "KotlinULong"
+- Name: "PvbaFloat"
+  SwiftName: "KotlinFloat"
+- Name: "PvbaDouble"
+  SwiftName: "KotlinDouble"
+- Name: "PvbaBoolean"
+  SwiftName: "KotlinBoolean"
+- Name: "PvbaKotlinCancellationException"
+  SwiftName: "KotlinCancellationException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+- Name: "PvbaKotlinThrowable"
+  SwiftName: "KotlinThrowable"
+  Properties:
+  - Name: "cause"
+    PropertyKind: "Instance"
+    SwiftName: "cause"
+    Type: "PvbaKotlinThrowable * _Nullable"
+  - Name: "message"
+    PropertyKind: "Instance"
+    SwiftName: "message"
+    Type: "NSString * _Nullable"
+  Methods:
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "getStackTrace"
+    MethodKind: "Instance"
+    SwiftName: "getStackTrace()"
+    ResultType: "PvbaKotlinArray<NSString *> * _Nonnull"
+  - Selector: "printStackTrace"
+    MethodKind: "Instance"
+    SwiftName: "printStackTrace()"
+    ResultType: "void"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "PvbaKotlinArray"
+  SwiftName: "KotlinArray"
+  Properties:
+  - Name: "size"
+    PropertyKind: "Instance"
+    SwiftName: "size"
+    Type: "int32_t"
+  Methods:
+  - Selector: "arrayWithSize:init:"
+    MethodKind: "Instance"
+    SwiftName: "init(size:init:)"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "T _Nullable (^ _Nonnull)(PvbaInt * _Nonnull)"
+  - Selector: "getIndex:"
+    MethodKind: "Instance"
+    SwiftName: "get(index:)"
+    ResultType: "T _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+  - Selector: "iterator"
+    MethodKind: "Instance"
+    SwiftName: "iterator()"
+    ResultType: "id<PvbaKotlinIterator> _Nonnull"
+  - Selector: "setIndex:value:"
+    MethodKind: "Instance"
+    SwiftName: "set(index:value:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "int32_t"
+    - Position: 1
+      Type: "T _Nullable"
+- Name: "PvbaKotlinIllegalStateException"
+  SwiftName: "KotlinIllegalStateException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+- Name: "PvbaKotlinRuntimeException"
+  SwiftName: "KotlinRuntimeException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+- Name: "PvbaKotlinException"
+  SwiftName: "KotlinException"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nullable"
+    - Position: 1
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+- Name: "PvbaSkieColdFlowIterator"
+  SwiftName: "SkieColdFlowIterator"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "initWithFlow:"
+    MethodKind: "Instance"
+    SwiftName: "init(flow:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlow> _Nonnull"
+  - Selector: "cancel"
+    MethodKind: "Instance"
+    SwiftName: "cancel()"
+    ResultType: "void"
+  - Selector: "hasNextWithCompletionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__hasNext(completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "void (^ _Nonnull)(PvbaBoolean * _Nullable, NSError * _Nullable)"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "E _Nullable"
+- Name: "PvbaSkieKotlinFlow"
+  SwiftBridge: "SkieSwiftFlow"
+  SwiftName: "SkieKotlinFlow"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkieKotlinMutableSharedFlow"
+  SwiftBridge: "SkieSwiftMutableSharedFlow"
+  SwiftName: "SkieKotlinMutableSharedFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<T> * _Nonnull"
+  - Name: "subscriptionCount"
+    PropertyKind: "Instance"
+    SwiftName: "subscriptionCount"
+    Type: "PvbaSkieKotlinStateFlow<PvbaInt *> * _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreMutableSharedFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "T _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "resetReplayCache"
+    MethodKind: "Instance"
+    SwiftName: "resetReplayCache()"
+    ResultType: "void"
+  - Selector: "tryEmitValue:"
+    MethodKind: "Instance"
+    SwiftName: "tryEmit(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nonnull"
+- Name: "PvbaSkieKotlinMutableStateFlow"
+  SwiftBridge: "SkieSwiftMutableStateFlow"
+  SwiftName: "SkieKotlinMutableStateFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<T> * _Nonnull"
+  - Name: "subscriptionCount"
+    PropertyKind: "Instance"
+    SwiftName: "subscriptionCount"
+    Type: "PvbaSkieKotlinStateFlow<PvbaInt *> * _Nonnull"
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "T _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreMutableStateFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "compareAndSetExpect:update:"
+    MethodKind: "Instance"
+    SwiftName: "compareAndSet(expect:update:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nonnull"
+    - Position: 1
+      Type: "T _Nonnull"
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "T _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "resetReplayCache"
+    MethodKind: "Instance"
+    SwiftName: "resetReplayCache()"
+    ResultType: "void"
+  - Selector: "tryEmitValue:"
+    MethodKind: "Instance"
+    SwiftName: "tryEmit(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nonnull"
+- Name: "PvbaSkieKotlinOptionalFlow"
+  SwiftBridge: "SkieSwiftOptionalFlow"
+  SwiftName: "SkieKotlinOptionalFlow"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkieKotlinOptionalMutableSharedFlow"
+  SwiftBridge: "SkieSwiftOptionalMutableSharedFlow"
+  SwiftName: "SkieKotlinOptionalMutableSharedFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<id> * _Nonnull"
+  - Name: "subscriptionCount"
+    PropertyKind: "Instance"
+    SwiftName: "subscriptionCount"
+    Type: "PvbaSkieKotlinStateFlow<PvbaInt *> * _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreMutableSharedFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "T _Nullable"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "resetReplayCache"
+    MethodKind: "Instance"
+    SwiftName: "resetReplayCache()"
+    ResultType: "void"
+  - Selector: "tryEmitValue:"
+    MethodKind: "Instance"
+    SwiftName: "tryEmit(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nullable"
+- Name: "PvbaSkieKotlinOptionalMutableStateFlow"
+  SwiftBridge: "SkieSwiftOptionalMutableStateFlow"
+  SwiftName: "SkieKotlinOptionalMutableStateFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<id> * _Nonnull"
+  - Name: "subscriptionCount"
+    PropertyKind: "Instance"
+    SwiftName: "subscriptionCount"
+    Type: "PvbaSkieKotlinStateFlow<PvbaInt *> * _Nonnull"
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "T _Nullable"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreMutableStateFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "compareAndSetExpect:update:"
+    MethodKind: "Instance"
+    SwiftName: "compareAndSet(expect:update:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nullable"
+    - Position: 1
+      Type: "T _Nullable"
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "T _Nullable"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "resetReplayCache"
+    MethodKind: "Instance"
+    SwiftName: "resetReplayCache()"
+    ResultType: "void"
+  - Selector: "tryEmitValue:"
+    MethodKind: "Instance"
+    SwiftName: "tryEmit(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "T _Nullable"
+- Name: "PvbaSkieKotlinOptionalSharedFlow"
+  SwiftBridge: "SkieSwiftOptionalSharedFlow"
+  SwiftName: "SkieKotlinOptionalSharedFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<id> * _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreSharedFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkieKotlinOptionalStateFlow"
+  SwiftBridge: "SkieSwiftOptionalStateFlow"
+  SwiftName: "SkieKotlinOptionalStateFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<id> * _Nonnull"
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "T _Nullable"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreStateFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkieKotlinSharedFlow"
+  SwiftBridge: "SkieSwiftSharedFlow"
+  SwiftName: "SkieKotlinSharedFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<T> * _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreSharedFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkieKotlinStateFlow"
+  SwiftBridge: "SkieSwiftStateFlow"
+  SwiftName: "SkieKotlinStateFlow"
+  SwiftPrivate: true
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<T> * _Nonnull"
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "T _Nonnull"
+  Methods:
+  - Selector: "initWithDelegate:"
+    MethodKind: "Instance"
+    SwiftName: "init(_:)"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreStateFlow> _Nonnull"
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaSkie_CancellationHandler"
+  SwiftName: "Skie_CancellationHandler"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "cancel"
+    MethodKind: "Instance"
+    SwiftName: "cancel()"
+    ResultType: "void"
+- Name: "PvbaSkie_SuspendHandler"
+  SwiftName: "Skie_SuspendHandler"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "initWithCancellationHandler:dispatcherDelegate:onResult:"
+    MethodKind: "Instance"
+    SwiftName: "init(cancellationHandler:dispatcherDelegate:onResult:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaSkie_CancellationHandler * _Nonnull"
+    - Position: 1
+      Type: "id<PvbaSkie_DispatcherDelegate> _Nonnull"
+    - Position: 2
+      Type: "void (^ _Nonnull)(PvbaSkie_SuspendResult * _Nonnull)"
+- Name: "PvbaSkie_SuspendResult"
+  SwiftName: "Skie_SuspendResult"
+  SwiftPrivate: true
+- Name: "PvbaSkie_SuspendResultSuccess"
+  SwiftName: "Skie_SuspendResult.Success"
+  SwiftPrivate: true
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "id _Nullable"
+  Methods:
+  - Selector: "initWithValue:"
+    MethodKind: "Instance"
+    SwiftName: "init(value:)"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "doCopyValue:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(value:)"
+    ResultType: "PvbaSkie_SuspendResultSuccess * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "PvbaSkie_SuspendResultError"
+  SwiftName: "Skie_SuspendResult.Error"
+  SwiftPrivate: true
+  Properties:
+  - Name: "error"
+    PropertyKind: "Instance"
+    SwiftName: "error"
+    Type: "NSError * _Nonnull"
+  Methods:
+  - Selector: "initWithError:"
+    MethodKind: "Instance"
+    SwiftName: "init(error:)"
+    Parameters:
+    - Position: 0
+      Type: "NSError * _Nonnull"
+  - Selector: "doCopyError:"
+    MethodKind: "Instance"
+    SwiftName: "doCopy(error:)"
+    ResultType: "PvbaSkie_SuspendResultError * _Nonnull"
+    Parameters:
+    - Position: 0
+      Type: "NSError * _Nonnull"
+  - Selector: "isEqual:"
+    MethodKind: "Instance"
+    SwiftName: "isEqual(_:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+  - Selector: "hash"
+    MethodKind: "Instance"
+    SwiftName: "hash()"
+    ResultType: "NSUInteger"
+  - Selector: "description"
+    MethodKind: "Instance"
+    SwiftName: "description()"
+    ResultType: "NSString * _Nonnull"
+- Name: "PvbaSkie_SuspendResultCanceled"
+  SwiftName: "Skie_SuspendResult.Canceled"
+  SwiftPrivate: true
+- Name: "PvbaSpaydPayViaBankAppResolver"
+  SwiftName: "SpaydPayViaBankAppResolver"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+  - Selector: "isPayViaBankAppSupported"
+    MethodKind: "Instance"
+    SwiftName: "isPayViaBankAppSupported()"
+    ResultType: "BOOL"
+  - Selector: "payViaBankAppSpayd:navigationParams:"
+    MethodKind: "Instance"
+    SwiftName: "payViaBankApp(spayd:navigationParams:)"
+    ResultType: "id _Nullable"
+    Parameters:
+    - Position: 0
+      Type: "NSString * _Nonnull"
+    - Position: 1
+      Type: "PvbaNavigationParameters * _Nonnull"
+- Name: "PvbaNavigationParameters"
+  SwiftName: "NavigationParameters"
+  Methods:
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+- Name: "PvbaQrCodeFileException"
+  SwiftName: "QrCodeFileException"
+  Properties:
+  - Name: "cause"
+    PropertyKind: "Instance"
+    SwiftName: "cause"
+    Type: "PvbaKotlinThrowable * _Nullable"
+  Methods:
+  - Selector: "initWithCause:"
+    MethodKind: "Instance"
+    SwiftName: "init(cause:)"
+    Parameters:
+    - Position: 0
+      Type: "PvbaKotlinThrowable * _Nullable"
+  - Selector: "init"
+    MethodKind: "Instance"
+    SwiftName: "init()"
+    Availability: "nonswift"
+  - Selector: "initWithMessage:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:)"
+    Availability: "nonswift"
+  - Selector: "initWithMessage:cause:"
+    MethodKind: "Instance"
+    SwiftName: "init(message:cause:)"
+    Availability: "nonswift"
+- Name: "Pvba__SkieSuspendWrappersKt"
+  SwiftName: "__SkieSuspendWrappersKt"
+  Availability: "nonswift"
+  Methods:
+  - Selector: "Skie_Suspend__0__hasNextDispatchReceiver:suspendHandler:"
+    MethodKind: "Class"
+    SwiftName: "Skie_Suspend__0__hasNext(dispatchReceiver:suspendHandler:)"
+    Availability: "nonswift"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "PvbaSkieColdFlowIterator<id> * _Nonnull"
+    - Position: 1
+      Type: "PvbaSkie_SuspendHandler * _Nonnull"
+  - Selector: "Skie_Suspend__1__collectDispatchReceiver:collector:suspendHandler:"
+    MethodKind: "Class"
+    SwiftName: "Skie_Suspend__1__collect(dispatchReceiver:collector:suspendHandler:)"
+    Availability: "nonswift"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlow> _Nonnull"
+    - Position: 1
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 2
+      Type: "PvbaSkie_SuspendHandler * _Nonnull"
+  - Selector: "Skie_Suspend__2__emitDispatchReceiver:value:suspendHandler:"
+    MethodKind: "Class"
+    SwiftName: "Skie_Suspend__2__emit(dispatchReceiver:value:suspendHandler:)"
+    Availability: "nonswift"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "id _Nullable"
+    - Position: 2
+      Type: "PvbaSkie_SuspendHandler * _Nonnull"
+Protocols:
+- Name: "PvbaKotlinIterator"
+  SwiftName: "KotlinIterator"
+  Methods:
+  - Selector: "hasNext"
+    MethodKind: "Instance"
+    SwiftName: "hasNext()"
+    ResultType: "BOOL"
+  - Selector: "next"
+    MethodKind: "Instance"
+    SwiftName: "next()"
+    ResultType: "id _Nullable"
+- Name: "PvbaSkie_DispatcherDelegate"
+  SwiftName: "Skie_DispatcherDelegate"
+  SwiftPrivate: true
+  Methods:
+  - Selector: "dispatchBlock:"
+    MethodKind: "Instance"
+    SwiftName: "dispatch(block:)"
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreRunnable> _Nonnull"
+- Name: "PvbaKotlinx_coroutines_coreFlow"
+  SwiftName: "Kotlinx_coroutines_coreFlow"
+  Methods:
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaKotlinx_coroutines_coreFlowCollector"
+  SwiftName: "Kotlinx_coroutines_coreFlowCollector"
+  Methods:
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaKotlinx_coroutines_coreStateFlow"
+  SwiftName: "Kotlinx_coroutines_coreStateFlow"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "id _Nullable"
+- Name: "PvbaKotlinx_coroutines_coreSharedFlow"
+  SwiftName: "Kotlinx_coroutines_coreSharedFlow"
+  Properties:
+  - Name: "replayCache"
+    PropertyKind: "Instance"
+    SwiftName: "replayCache"
+    Type: "NSArray<id> * _Nonnull"
+  Methods:
+  - Selector: "collectCollector:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__collect(collector:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id<PvbaKotlinx_coroutines_coreFlowCollector> _Nonnull"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+- Name: "PvbaKotlinx_coroutines_coreMutableSharedFlow"
+  SwiftName: "Kotlinx_coroutines_coreMutableSharedFlow"
+  Properties:
+  - Name: "subscriptionCount"
+    PropertyKind: "Instance"
+    SwiftName: "subscriptionCount"
+    Type: "PvbaSkieKotlinStateFlow<PvbaInt *> * _Nonnull"
+  Methods:
+  - Selector: "emitValue:completionHandler:"
+    MethodKind: "Instance"
+    SwiftName: "__emit(value:completionHandler:)"
+    SwiftPrivate: true
+    ResultType: "void"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+    - Position: 1
+      Type: "void (^ _Nonnull)(NSError * _Nullable)"
+  - Selector: "resetReplayCache"
+    MethodKind: "Instance"
+    SwiftName: "resetReplayCache()"
+    ResultType: "void"
+  - Selector: "tryEmitValue:"
+    MethodKind: "Instance"
+    SwiftName: "tryEmit(value:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+- Name: "PvbaKotlinx_coroutines_coreMutableStateFlow"
+  SwiftName: "Kotlinx_coroutines_coreMutableStateFlow"
+  Properties:
+  - Name: "value"
+    PropertyKind: "Instance"
+    SwiftName: "value"
+    Type: "id _Nullable"
+  Methods:
+  - Selector: "compareAndSetExpect:update:"
+    MethodKind: "Instance"
+    SwiftName: "compareAndSet(expect:update:)"
+    ResultType: "BOOL"
+    Parameters:
+    - Position: 0
+      Type: "id _Nullable"
+    - Position: 1
+      Type: "id _Nullable"
+- Name: "PvbaKotlinx_coroutines_coreRunnable"
+  SwiftName: "Kotlinx_coroutines_coreRunnable"
+  Methods:
+  - Selector: "run"
+    MethodKind: "Instance"
+    SwiftName: "run()"
+    ResultType: "void"
