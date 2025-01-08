@@ -750,7 +750,7 @@ Classes:
     - Position: 0
       Type: "NSString * _Nonnull"
     - Position: 1
-      Type: "PvbaNavigationParameters * _Nonnull"
+      Type: "PvbaNavigationParameters * _Nullable"
 - Name: "PvbaNavigationParameters"
   SwiftName: "NavigationParameters"
   Methods:
